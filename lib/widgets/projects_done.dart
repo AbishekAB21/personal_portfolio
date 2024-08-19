@@ -3,8 +3,8 @@ import 'package:lottie/lottie.dart';
 import 'package:personal_portfolio/config/responsive.dart';
 import 'package:personal_portfolio/utils/fontstyles.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+class ProjectsIntro extends StatelessWidget {
+  const ProjectsIntro({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class AboutMe extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  "About me!",
+                  "Projects Done",
                   style: Fonstyles.HeadingTextStyle(context),
                 ),
               ),
@@ -28,7 +28,7 @@ class AboutMe extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  "I'm Abishek, a self taught flutter developer. I'm familiar with a lot of technologies related to flutter. For the past few months I've been part of a self learning bootcamp where I developed a lot of projects using Flutter. You can find all of them in the projects section.\n\nComing to my educational background, I'm a BCA graduate, I graduated in 2022 from Nehru Arts and Science college, Coimbatore.\n\nI also have 1 year of experience from Cognizant as a Programer trainee. There, I was a PEGA SYSTEM ARCHITECT tasked with developing robust business applications using PEGA low code app development platform.",
+                  "During my time at this self learning bootcamp called 'Brototype' I've developed several applications using Flutter. You can find these said projects below and for more details you can click on the specific project.",
                   overflow: TextOverflow.clip,
                   textAlign: TextAlign.justify,
                   style: Fonstyles.RegularTextStyle(context),
@@ -36,7 +36,7 @@ class AboutMe extends StatelessWidget {
               ),
               SizedBox(height: 20),
               LottieBuilder.asset(
-                "assets/Animation - 1724060555500.json",
+                "assets/Animation - 1724090813977.json",
                 height: 300,
                 width: 300,
               ),
@@ -51,7 +51,7 @@ class AboutMe extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
-                      "About me!",
+                      "Projects Done",
                       style: Fonstyles.HeadingTextStyle(context),
                     ),
                   ),
@@ -64,7 +64,7 @@ class AboutMe extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "I'm Abishek, a self taught flutter developer. I'm familiar with a lot of technologies related to flutter. For the past few months I've been part of a self learning bootcamp where I developed a lot of projects using Flutter. You can find all of them in the projects section.\n\nComing to my educational background, I'm a BCA graduate, I graduated in 2022 from Nehru Arts and Science college, Coimbatore.\n\nI also have 1 year of experience from Cognizant as a Programer trainee. There, I was a PEGA SYSTEM ARCHITECT tasked with developing robust business applications using PEGA low code app development platform.",
+                      "During my time at this self learning bootcamp called 'Brototype' I've developed several applications using Flutter. You can find these said projects below and for more details you can click on the specific project.",
                       overflow: TextOverflow.clip,
                       textAlign: TextAlign.justify,
                       style: Fonstyles.RegularTextStyle(context),
@@ -73,7 +73,7 @@ class AboutMe extends StatelessWidget {
                 ],
               ),
               LottieBuilder.asset(
-                "assets/Animation - 1724060555500.json",
+                "assets/Animation - 1724090813977.json",
                 height: Responsive.isWideDesktop(context) ? 500 : 400,
                 width: Responsive.isWideDesktop(context) ? 500 : 400,
               ),

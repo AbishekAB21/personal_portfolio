@@ -31,4 +31,12 @@ class Fonstyles {
         fontWeight: FontWeight.bold,
         fontFamily: "Merriweather Sans");
   }
+
+  static TextStyle HeadingTextStyle2(BuildContext context) {
+    return TextStyle(
+        color: Theme.of(context).colorScheme.inversePrimary,
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        fontFamily: "Merriweather Sans");
+  }
 }

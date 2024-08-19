@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:personal_portfolio/widgets/about_me.dart';
 import 'package:personal_portfolio/widgets/drawrer_widget.dart';
+import 'package:personal_portfolio/widgets/projects_done.dart';
+import 'package:personal_portfolio/widgets/projects_list_view.dart';
 import 'package:personal_portfolio/widgets/reusable_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,12 +20,20 @@ class HomeScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-            // About Me
+                // About Me
                 AboutMe(),
-                
-            // Projects 
+                SizedBox(
+                  height: 20,
+                ),
 
-            // Contact me 
+                // Projects
+                ProjectsIntro(),
+                SizedBox(
+                  height: 10,
+                ),
+                ProjectsList(),
+
+                // Contact me
               ],
             ),
           ),
