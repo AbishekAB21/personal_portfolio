@@ -39,11 +39,6 @@ class AboutMe extends StatelessWidget {
             )
           ],
         ),
-        // CircleAvatar(
-        //     radius: 100,
-        //     backgroundImage: AssetImage(
-        //       "assets/ProfilePic.jpeg",
-        //     ))
         LottieBuilder.asset("assets/Animation - 1724060555500.json",
         height: 400,
         width: 400,
