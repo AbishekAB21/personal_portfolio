@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/widgets/about_me.dart';
+import 'package:personal_portfolio/widgets/drawrer_widget.dart';
+import 'package:personal_portfolio/widgets/reusable_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,20 +9,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // background should be a gradient preferebly black
-     // Use some lottie animations or something 
-     // Display my name and role on the left center and my photo on the right
-     // then move on to the skills section 
-     // then display your projects
-     // educational background ? idk maybe 
-     // contact me section with "name" "email" and "Message"
-     // social media buttons LinkedIn, Insta, X, Github 
-     // should be responsive on phone and web
-     // Use some good fonts not the default one 
-     // Refference : Shohruh Ak on YT 
-      body: Center(
-        child: Text("Body"),
-      ),
-    );
+        backgroundColor: Theme.of(context).colorScheme.background,
+        appBar: ReusableAppBarWidget(),
+        drawer: MyDrawrer(),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+            // About Me
+                AboutMe(),
+            
+            // 
+              ],
+            ),
+          ),
+        ));
   }
 }
