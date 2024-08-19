@@ -19,8 +19,10 @@ class HomeScreen extends StatelessWidget {
               children: [
             // About Me
                 AboutMe(),
-            
-            // 
+                
+            // Projects 
+
+            // Contact me 
               ],
             ),
           ),

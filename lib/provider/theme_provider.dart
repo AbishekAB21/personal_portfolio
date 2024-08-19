@@ -6,7 +6,7 @@ class ThemeProvider with ChangeNotifier {
   ThemeData _themeData = darkmode;
 
   ThemeProvider() {
-   // _loadTheme();
+   _loadTheme();
   }
 
   ThemeData get themeData => _themeData;
@@ -16,7 +16,7 @@ class ThemeProvider with ChangeNotifier {
   set themeData(ThemeData themeData) {
     _themeData = themeData;
     notifyListeners();
-   // _saveTheme();
+    _saveTheme();
   }
 
   void toggleTheme() {
@@ -26,7 +26,7 @@ class ThemeProvider with ChangeNotifier {
       _themeData = lightMode;
     }
     notifyListeners();
-    //_saveTheme();
+    _saveTheme();
   }
 
   // Load the saved theme mode from SharedPreferences
