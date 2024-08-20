@@ -21,7 +21,7 @@ class ProjectsList extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment:
                   CrossAxisAlignment.center, 
               children: [
@@ -32,26 +32,16 @@ class ProjectsList extends StatelessWidget {
                     width: 80,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 50),
                 Column(
                   children: [
                     Text(
-                      "Foodio - A Food Delivery Application",
+                      "Foodio - A Food Delivery App",
                       style: Fonstyles.HeadingTextStyle2(context).copyWith(
                         fontSize: 16, // Adjusted font size
                       ),
                     ),
-                    SizedBox(height: 10),
-                    Text(
-                      "A fully fledged food delivery application built using Flutter/Dart, Firebase for backend with Provider and Getx for state management.",
-                      overflow:
-                          TextOverflow.ellipsis, 
-                      maxLines: 3, 
-                      style: Fonstyles.SmallTextStyle(context).copyWith(
-                        fontSize: 14,
-                      ),
-                      
-                    ),
+                    
                     SizedBox(height: 5,)
                   ],
                 )

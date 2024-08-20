@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:personal_portfolio/widgets/about_me.dart';
 import 'package:personal_portfolio/widgets/drawrer_widget.dart';
 import 'package:personal_portfolio/widgets/projects_done.dart';
@@ -13,13 +12,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
-        appBar: ReusableAppBarWidget(),
+        appBar: ReusableAppBarWidget(appBarTitle: "",),
         drawer: MyDrawrer(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
           child: SingleChildScrollView(
             child: Column(
               children: [
+                
+                SizedBox(height: 30,),
                 // About Me
                 AboutMe(),
                 SizedBox(
