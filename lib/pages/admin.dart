@@ -85,7 +85,7 @@ class _AdminScreenState extends State<AdminScreen> {
                             buttontext: "Add To Database",
                             onTap: () async {
                               if (_formKey.currentState!.validate()) {
-                                print("----------FORM VALIDATED---------");
+                                print("FORM VALIDATED");
                                 await provider.uploadProject(
                                     projectName: _nameController.text,
                                     projectDescription:
@@ -103,6 +103,9 @@ class _AdminScreenState extends State<AdminScreen> {
                                           style: Fonstyles.RegularTextStyle(
                                               context),
                                         )));
+                                        _descriptionController.clear();
+                                        _nameController.clear();
+                                        _githubController.clear();
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(

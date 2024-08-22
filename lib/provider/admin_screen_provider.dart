@@ -24,31 +24,35 @@ class AdminProvider with ChangeNotifier {
       {required String projectName,
       required String projectDescription,
       required String githubLink}) async {
-    String projectLogo = '';
+    try {
+      String projectLogo = '';
 
-    if (_imageBytes != null) {
-      // Uploading the image to Firebase using putData for web
-      String imageName = DateTime.now().millisecondsSinceEpoch.toString();
-      final ref = FirebaseStorage.instance
-          .ref()
-          .child("project_images")
-          .child(imageName);
+      if (_imageBytes != null) {
+        String imageName = DateTime.now().millisecondsSinceEpoch.toString();
+        final ref = FirebaseStorage.instance
+            .ref()
+            .child("project_images")
+            .child(imageName);
 
-      // Uploading the image as bytes
-      await ref.putData(_imageBytes!);
-      projectLogo = await ref.getDownloadURL();
+        // Upload the image as bytes
+        await ref.putData(_imageBytes!);
+        projectLogo = await ref.getDownloadURL();
+      }
+
+      // Save all the details to the collection "projects"
+      await FirebaseFirestore.instance.collection("projects").add({
+        'projectName': projectName,
+        'projectDescription': projectDescription,
+        'githubLink': githubLink,
+        'projectLogo': projectLogo,
+      });
+
+      // Clear image data after upload
+      _imageBytes = null;
+      notifyListeners();
+    } catch (e) {
+      print("Error uploading project: $e");
+      rethrow;
     }
-
-    // Saving all the details to the collection "projects"
-    await FirebaseFirestore.instance.collection("projects").add({
-      'projectName': projectName,
-      'projectDescription': projectDescription,
-      'githubLink': githubLink,
-      'projectLogo': projectLogo,
-    });
-
-    // Clear image data after upload
-    _imageBytes = null;
-    notifyListeners();
   }
 }
