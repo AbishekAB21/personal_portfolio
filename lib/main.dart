@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProjectScreen(),
+      home: HomeScreen(),
       theme: Provider.of<ThemeProvider>(context).themeData,
       title: "Abishek AB - Portfolio",
     );

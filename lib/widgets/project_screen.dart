@@ -1,7 +1,5 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:personal_portfolio/utils/fontstyles.dart';
 import 'package:personal_portfolio/widgets/reusable_appbar.dart';
 
