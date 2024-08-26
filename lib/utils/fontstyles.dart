@@ -24,10 +24,26 @@ class Fonstyles {
         fontFamily: "Merriweather Sans");
   }
 
+  static TextStyle MediumTextStyle2(BuildContext context) {
+    return TextStyle(
+        color: Theme.of(context).colorScheme.inversePrimary,
+        fontSize: 35,
+        fontWeight: FontWeight.w500,
+        fontFamily: "Merriweather Sans");
+  }
+
   static TextStyle HeadingTextStyle(BuildContext context) {
     return TextStyle(
         color: Theme.of(context).colorScheme.inversePrimary,
         fontSize: 50,
+        fontWeight: FontWeight.bold,
+        fontFamily: "Merriweather Sans");
+  }
+
+  static TextStyle AbsolutelyMassiveTextStyle(BuildContext context) {
+    return TextStyle(
+        color: Theme.of(context).colorScheme.inversePrimary,
+        fontSize: 80,
         fontWeight: FontWeight.bold,
         fontFamily: "Merriweather Sans");
   }

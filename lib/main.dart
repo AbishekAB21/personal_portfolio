@@ -4,7 +4,6 @@ import 'package:personal_portfolio/pages/home.dart';
 import 'package:personal_portfolio/pages/splash.dart';
 import 'package:personal_portfolio/provider/admin_screen_provider.dart';
 import 'package:personal_portfolio/provider/theme_provider.dart';
-import 'package:personal_portfolio/widgets/project_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
