@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.background,
         appBar: ReusableAppBarWidget(
           appBarTitle: "",
         ),
@@ -22,10 +23,14 @@ class HomeScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 // Welcome Section
                 AnimatedWelcomeSection(),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 WelcomeSection(),
                 SizedBox(
                   height: 20,
