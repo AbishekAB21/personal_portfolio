@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
         appBar: ReusableAppBarWidget(
           appBarTitle: "",
         ),
@@ -26,7 +27,8 @@ class HomeScreen extends StatelessWidget {
                   height: 30,
                 ),
                 // Welcome Section
-
+                AnimatedWelcomeSection(),
+                WelcomeSection(),
                 SizedBox(
                   height: 20,
                 ),
