@@ -27,7 +27,7 @@ class Fonstyles {
   static TextStyle MediumTextStyle2(BuildContext context) {
     return TextStyle(
         color: Theme.of(context).colorScheme.inversePrimary,
-        fontSize: 35,
+        fontSize: 45,
         fontWeight: FontWeight.w500,
         fontFamily: "Merriweather Sans");
   }
@@ -43,7 +43,7 @@ class Fonstyles {
   static TextStyle AbsolutelyMassiveTextStyle(BuildContext context) {
     return TextStyle(
         color: Theme.of(context).colorScheme.inversePrimary,
-        fontSize: 80,
+        fontSize: 65,
         fontWeight: FontWeight.bold,
         fontFamily: "Merriweather Sans");
   }

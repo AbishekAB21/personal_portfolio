@@ -8,25 +8,36 @@ class WelcomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 150,),
       width: MediaQuery.of(context).size.width,
       height: 630,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          LottieBuilder.asset(
+         
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              
+              
+              Text(
+                "Abishek AB",
+                style: Fonstyles.AbsolutelyMassiveTextStyle(context),
+              ),
+              Text(
+                "Flutter Developer",
+                style: Fonstyles.HeadingTextStyle2(context),
+              ),
+
+              SizedBox(height: 20,)
+            ],
+          ),
+           LottieBuilder.asset(
             "assets/Animation - 1724696149122.json",
-            height: 300,
-            width: 300,
+            height: 500,
+            width: 500,
             repeat: true,
-          ),
-          SizedBox(height: 20,),
-          Text(
-            "Abishek AB",
-            style: Fonstyles.HeadingTextStyle(context),
-          ),
-          Text(
-            "Flutter Developer",
-            style: Fonstyles.AbsolutelyMassiveTextStyle(context),
           ),
         ],
       ),

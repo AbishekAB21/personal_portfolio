@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 AnimatedWelcomeSection(),
                 WelcomeSection(),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 // About Me
                 AboutMe(),

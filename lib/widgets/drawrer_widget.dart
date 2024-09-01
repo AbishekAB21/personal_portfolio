@@ -14,6 +14,7 @@ class MyDrawrer extends StatelessWidget {
 
     return Drawer(
         elevation: 0,
+        backgroundColor: Theme.of(context).colorScheme.background,
         child: Column(
           children: [
             DrawerHeader(

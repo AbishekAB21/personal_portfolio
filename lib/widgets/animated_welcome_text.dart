@@ -9,12 +9,14 @@ class AnimatedWelcomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedTextKit(animatedTexts: [
       TypewriterAnimatedText("Welcome to my portfolio !",
-          textStyle: Fonstyles.MediumTextStyle2(context)
-          
+          textStyle: Fonstyles.MediumTextStyle2(context),
+          speed: Duration(milliseconds: 70)
           )
     ],
-    isRepeatingAnimation: true,
-    repeatForever: true,
+    isRepeatingAnimation: false,
+    repeatForever: false,
+    // totalRepeatCount: 2,
+    
     );
   }
 }
