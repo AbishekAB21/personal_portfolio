@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/pages/admin.dart';
 import 'package:personal_portfolio/utils/fontstyles.dart';
+import 'package:personal_portfolio/widgets/drawrer_buttons.dart';
 
 class MyDrawrer extends StatelessWidget {
   const MyDrawrer({super.key});
@@ -28,38 +29,70 @@ class MyDrawrer extends StatelessWidget {
               "Flutter Developer",
               style: Fonstyles.SmallTextStyle(context),
             ),
-           
+            SizedBox(
+              height: 30,
+            ),
+
+// Admin Mode
+            GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AdminScreen(),
+                      ));
+                },
+                child: DrawrerButton(
+                    title: "Admin Mode",
+                    icon: Icon(
+                      Icons.lock,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ))),
             SizedBox(
               height: 20,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => AdminScreen(),));
-              },
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primary,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [ 
-                    Text(
-                      "Admin Mode",
-                      style: Fonstyles.RegularTextStyle(context),
-                    ),
-                    SizedBox(width: 10,),
-                    Icon(
-                      Icons.lock_rounded,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    ),
-                  ],
-                ),
-              ),
-            )
+
+// About Me
+            DrawrerButton(
+                title: "About Me",
+                icon: Icon(
+                  Icons.question_answer_rounded,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                )),
+            SizedBox(
+              height: 20,
+            ),
+
+// Skills
+            DrawrerButton(
+                title: "My Skills",
+                icon: Icon(
+                  Icons.auto_graph_outlined,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                )),
+            SizedBox(
+              height: 20,
+            ),
+
+// Projects
+            DrawrerButton(
+                title: "My Projects",
+                icon: Icon(
+                  Icons.construction_rounded,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                )),
+            SizedBox(
+              height: 20,
+            ),
+
+// Contact Me
+            DrawrerButton(
+                title: "Contact Me",
+                icon: Icon(
+                  Icons.mail_rounded,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                )),
           ],
         ));
   }

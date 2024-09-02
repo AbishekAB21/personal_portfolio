@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/utils/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';

@@ -16,8 +16,6 @@ class AnimatedWelcomeSection extends StatelessWidget {
     ],
     isRepeatingAnimation: false,
     repeatForever: false,
-    // totalRepeatCount: 2,
-    
     );
   }
 }
