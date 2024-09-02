@@ -24,11 +24,24 @@ class _AdminScreenState extends State<AdminScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50),
-        child: AddProjectContainer(
-          formKey: _formKey,
-          nameController: _nameController,
-          descriptionController: _descriptionController,
-          githubController: _githubController,
+
+        child: Column(
+          children: [
+
+// Add New Project Section
+            AddProjectContainer(
+              formKey: _formKey,
+              nameController: _nameController,
+              descriptionController: _descriptionController,
+              githubController: _githubController,
+            ),
+
+// Add New Skills Section
+
+// Update Profile Picture Section
+
+// Update About me and Project Desc part 
+          ],
         ),
       ),
     );
