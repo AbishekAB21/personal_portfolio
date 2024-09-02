@@ -40,7 +40,11 @@ class _AdminScreenState extends State<AdminScreen> {
 
 // Update Profile Picture Section
 
-// Update About me and Project Desc part 
+/* 
+Make the projects and about me dynamic.
+No need for a seperate firebase collection for that 
+*/
+
           ],
         ),
       ),

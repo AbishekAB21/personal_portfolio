@@ -60,6 +60,16 @@ class HomeScreen extends StatelessWidget {
 
                 // Skills
 
+                /*
+                Maybe design a horizontal list view like the project section 
+                for each skill and when you click a skill it displays a new
+                screen giving a brief description about that technology.
+
+                for eg if its firebase then explain about firebase.
+
+                just clone the project details screen 
+                */
+
                 // Projects
                 Container(
                   key: projectsKey,
