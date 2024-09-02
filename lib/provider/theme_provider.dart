@@ -6,12 +6,12 @@ class ThemeProvider with ChangeNotifier {
   ThemeData _themeData = darkmode;
 
   ThemeProvider() {
-   _loadTheme();
+    _loadTheme();
   }
 
   ThemeData get themeData => _themeData;
 
-  bool get isDarkMode => _themeData == darkmode;
+  bool get isDarkMode => true; // Always return true since only dark mode is used
 
   set themeData(ThemeData themeData) {
     _themeData = themeData;
@@ -19,27 +19,16 @@ class ThemeProvider with ChangeNotifier {
     _saveTheme();
   }
 
-  void toggleTheme() {
-    if (_themeData == lightMode) {
-      _themeData = darkmode;
-    } else {
-      _themeData = lightMode;
-    }
-    notifyListeners();
-    _saveTheme();
-  }
-
-  // Load the saved theme mode from SharedPreferences
+  // Load the saved theme mode from SharedPreferences (if needed)
   void _loadTheme() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isDarkMode = prefs.getBool('isDarkMode') ?? false;
-    _themeData = isDarkMode ? darkmode : lightMode;
+    _themeData = darkmode; // Always set to dark mode
     notifyListeners();
   }
 
-  // Save the current theme mode to SharedPreferences
+  // Save the current theme mode to SharedPreferences (optional, but kept for future use)
   void _saveTheme() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setBool('isDarkMode', _themeData == darkmode);
+    prefs.setBool('isDarkMode', true); // Always save as dark mode
   }
 }

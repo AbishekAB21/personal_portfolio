@@ -11,6 +11,7 @@ class AnimatedWelcomeSection extends StatelessWidget {
       TypewriterAnimatedText("Welcome to my portfolio !",
           textStyle: Fonstyles.MediumTextStyle2(context),
           speed: Duration(milliseconds: 70)
+          
           )
     ],
     isRepeatingAnimation: false,
