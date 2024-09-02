@@ -4,12 +4,18 @@ import 'package:personal_portfolio/utils/fontstyles.dart';
 import 'package:personal_portfolio/widgets/drawrer_buttons.dart';
 
 class MyDrawrer extends StatelessWidget {
-   final Function(GlobalKey, {double offset}) onSectionSelected;
-   final GlobalKey aboutMeKey;
-   final GlobalKey myProjectsKey;
-   final GlobalKey myskillsKey;
-   final GlobalKey contactMeKey;
-   MyDrawrer({super.key, required this.aboutMeKey, required this.myProjectsKey, required this.myskillsKey, required this.contactMeKey, required this.onSectionSelected});
+  final Function(GlobalKey, {double offset}) onSectionSelected;
+  final GlobalKey aboutMeKey;
+  final GlobalKey myProjectsKey;
+  final GlobalKey myskillsKey;
+  final GlobalKey contactMeKey;
+  MyDrawrer(
+      {super.key,
+      required this.aboutMeKey,
+      required this.myProjectsKey,
+      required this.myskillsKey,
+      required this.contactMeKey,
+      required this.onSectionSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -38,32 +44,11 @@ class MyDrawrer extends StatelessWidget {
               height: 30,
             ),
 
-// Admin Mode
-            GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AdminScreen(),
-                      ));
-                },
-                child: DrawrerButton(
-                    title: "Admin Mode",
-                    icon: Icon(
-                      Icons.lock,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    ))),
-            SizedBox(
-              height: 20,
-            ),
-
 // About Me
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
-                onSectionSelected(aboutMeKey, offset : 100.0);
-               
+                onSectionSelected(aboutMeKey, offset: 100.0);
               },
               child: DrawrerButton(
                   title: "About Me",
@@ -80,7 +65,6 @@ class MyDrawrer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
-                
               },
               child: DrawrerButton(
                   title: "My Skills",
@@ -111,12 +95,40 @@ class MyDrawrer extends StatelessWidget {
             ),
 
 // Contact Me
-            DrawrerButton(
-                title: "Contact Me",
-                icon: Icon(
-                  Icons.mail_rounded,
-                  color: Theme.of(context).colorScheme.inversePrimary,
-                )),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: DrawrerButton(
+                  title: "Contact Me",
+                  icon: Icon(
+                    Icons.mail_rounded,
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  )),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+
+// Admin Mode
+            GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AdminScreen(),
+                      ));
+                },
+                child: DrawrerButton(
+                    title: "Admin Mode",
+                    icon: Icon(
+                      Icons.lock,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ))),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ));
   }
