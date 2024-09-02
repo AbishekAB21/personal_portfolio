@@ -42,12 +42,14 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
+
                 // Welcome Section
                 AnimatedWelcomeSection(),
                 WelcomeSection(),
                 SizedBox(
                   height: 15,
                 ),
+
                 // About Me
                 Container(
                   key: aboutMeKey,
@@ -55,6 +57,8 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
+
+                // Skills
 
                 // Projects
                 Container(
