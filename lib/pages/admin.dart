@@ -14,6 +14,8 @@ class _AdminScreenState extends State<AdminScreen> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _descriptionController2 = TextEditingController();
+  final TextEditingController _descriptionController3 = TextEditingController();
   final TextEditingController _githubController = TextEditingController();
 
   @override
@@ -22,30 +24,34 @@ class _AdminScreenState extends State<AdminScreen> {
       appBar: ReusableAppBarWidget(
         appBarTitle: "",
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 50),
-
-        child: Column(
-          children: [
-
-// Add New Project Section
-            AddProjectContainer(
-              formKey: _formKey,
-              nameController: _nameController,
-              descriptionController: _descriptionController,
-              githubController: _githubController,
-            ),
-
-// Add New Skills Section
-
-// Update Profile Picture Section
-
-/* 
-Make the projects and about me dynamic.
-No need for a seperate firebase collection for that 
-*/
-
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+        
+          child: Column(
+            children: [
+        
+        // Add New Project Section
+              AddProjectContainer(
+                formKey: _formKey,
+                nameController: _nameController,
+                descriptionController: _descriptionController,
+                descriptionController2: _descriptionController2,
+                descriptionController3: _descriptionController3,
+                githubController: _githubController,
+              ),
+        
+        // Add New Skills Section
+        
+        // Update Profile Picture Section
+        
+        /* 
+        Make the projects and about me dynamic.
+        No need for a seperate firebase collection for that 
+        */
+        
+            ],
+          ),
         ),
       ),
     );

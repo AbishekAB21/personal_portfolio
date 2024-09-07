@@ -22,7 +22,9 @@ class AdminProvider with ChangeNotifier {
 
   Future<void> uploadProject(
       {required String projectName,
-      required String projectDescription,
+      required String projectDescription1,
+      required String projectDescription2,
+      required String projectDescription3,
       required String githubLink}) async {
     try {
       String projectLogo = '';
@@ -42,7 +44,9 @@ class AdminProvider with ChangeNotifier {
       // Save all the details to the collection "projects"
       await FirebaseFirestore.instance.collection("projects").add({
         'projectName': projectName,
-        'projectDescription': projectDescription,
+        'projectDescription1': projectDescription1,
+        'projectDescription2': projectDescription2,
+        'projectDescription3': projectDescription3,
         'githubLink': githubLink,
         'projectLogo': projectLogo,
       });

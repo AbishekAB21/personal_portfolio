@@ -10,12 +10,16 @@ class AddProjectContainer extends StatelessWidget {
   final GlobalKey<FormState> formKey;
   final TextEditingController nameController;
   final TextEditingController descriptionController;
+  final TextEditingController descriptionController2;
+  final TextEditingController descriptionController3;
   final TextEditingController githubController;
 
   const AddProjectContainer({
     required this.formKey,
     required this.nameController,
     required this.descriptionController,
+    required this.descriptionController2,
+    required this.descriptionController3,
     required this.githubController,
   });
 
@@ -43,7 +47,10 @@ class AddProjectContainer extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                ImageCircle(imageBytes: provider.imageBytes, ontap: provider.pickImage,),
+                ImageCircle(
+                  imageBytes: provider.imageBytes,
+                  ontap: provider.pickImage,
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -55,9 +62,30 @@ class AddProjectContainer extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
+                // Basic Desc
                 ReusableTextFormField(
                   cntrlr: descriptionController,
-                  hinttext: "Project Description",
+                  hinttext: "Project Description - Basic details",
+                  icon: Icon(Icons.description_rounded),
+                ),
+
+                // Backend State management
+                SizedBox(
+                  height: 10,
+                ),
+                ReusableTextFormField(
+                  cntrlr: descriptionController2,
+                  hinttext: "Project Description - Backend State management",
+                  icon: Icon(Icons.description_rounded),
+                ),
+
+                // Conclusion
+                SizedBox(
+                  height: 10,
+                ),
+                ReusableTextFormField(
+                  cntrlr: descriptionController3,
+                  hinttext: "Project Description - Conclusion",
                   icon: Icon(Icons.description_rounded),
                 ),
                 SizedBox(
@@ -78,37 +106,33 @@ class AddProjectContainer extends StatelessWidget {
                       print("FORM VALIDATED");
                       await provider.uploadProject(
                           projectName: nameController.text,
-                          projectDescription:
-                              descriptionController.text,
+                          projectDescription1: descriptionController.text,
+                          projectDescription2: descriptionController2.text,
+                          projectDescription3: descriptionController3.text,
                           githubLink: githubController.text);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                              duration: Duration(seconds: 3),
-                              behavior: SnackBarBehavior.floating,
-                              backgroundColor: Theme.of(context)
-                                  .colorScheme
-                                  .tertiary,
-                              content: Text(
-                                "Successfully added the new project",
-                                style: Fonstyles.RegularTextStyle(
-                                    context),
-                              )));
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          duration: Duration(seconds: 3),
+                          behavior: SnackBarBehavior.floating,
+                          backgroundColor:
+                              Theme.of(context).colorScheme.tertiary,
+                          content: Text(
+                            "Successfully added the new project",
+                            style: Fonstyles.RegularTextStyle(context),
+                          )));
                       descriptionController.clear();
+                      descriptionController2.clear();
+                      descriptionController3.clear();
                       nameController.clear();
                       githubController.clear();
                     } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                              duration: Duration(seconds: 3),
-                              behavior: SnackBarBehavior.floating,
-                              backgroundColor: Theme.of(context)
-                                  .colorScheme
-                                  .error,
-                              content: Text(
-                                "Error adding the new project",
-                                style: Fonstyles.RegularTextStyle(
-                                    context),
-                              )));
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          duration: Duration(seconds: 3),
+                          behavior: SnackBarBehavior.floating,
+                          backgroundColor: Theme.of(context).colorScheme.error,
+                          content: Text(
+                            "Error adding the new project",
+                            style: Fonstyles.RegularTextStyle(context),
+                          )));
                     }
                   },
                 )

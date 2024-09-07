@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/pages/admin.dart';
 import 'package:personal_portfolio/pages/home.dart';
 import 'package:personal_portfolio/provider/admin_screen_provider.dart';
 import 'package:personal_portfolio/provider/theme_provider.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProjectScreen(),
+      home: AdminScreen(),
       theme: Provider.of<ThemeProvider>(context).themeData,
       title: "Abishek AB - Portfolio",
     );
