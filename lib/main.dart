@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/pages/home.dart';
 import 'package:personal_portfolio/provider/admin_screen_provider.dart';
 import 'package:personal_portfolio/provider/theme_provider.dart';
+import 'package:personal_portfolio/widgets/project_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: ProjectScreen(),
       theme: Provider.of<ThemeProvider>(context).themeData,
       title: "Abishek AB - Portfolio",
     );
