@@ -65,6 +65,7 @@ class MyDrawrer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
+                onSectionSelected(myskillsKey);
               },
               child: DrawrerButton(
                   title: "My Skills",

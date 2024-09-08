@@ -62,9 +62,12 @@ class HomeScreen extends StatelessWidget {
 
                 // Skills
 
-                SkillsSection(),
+                Container(
+                  key: skillsKey,
+                  child: SkillsSection()),
                 SizedBox(height: 10,),
                 SkillsMenu(),
+                SizedBox(height: 20,),
                 
                 
                 /*

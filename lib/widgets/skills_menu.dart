@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/config/responsive.dart';
+import 'package:personal_portfolio/provider/hover_provider.dart';
 import 'package:personal_portfolio/widgets/skills_tile.dart';
+import 'package:provider/provider.dart';
 
 class SkillsMenu extends StatelessWidget {
   const SkillsMenu({super.key});
@@ -40,23 +42,35 @@ class SkillsMenu extends StatelessWidget {
     Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        SkillsTile(
-          title: "UI/UX",
-          imageURL: "assets/ui.png",
+        ChangeNotifierProvider(
+          create: (context) => HoverProvider(),
+          child: SkillsTile(
+            title: "UI/UX",
+            imageURL: "assets/ui.png",
+          ),
         ),
-        SkillsTile(
-          title: "Backend",
-          imageURL: "assets/backend.png",
+        ChangeNotifierProvider(
+          create: (context) => HoverProvider(),
+          child: SkillsTile(
+            title: "Backend",
+            imageURL: "assets/backend.png",
+          ),
         ),
-        SkillsTile(
-          title: "API",
-          imageURL: "assets/api.png",
+        ChangeNotifierProvider(
+          create: (context) => HoverProvider(),
+          child: SkillsTile(
+            title: "API",
+            imageURL: "assets/api.png",
+          ),
         ),
-        SkillsTile(
-          title: "Everything else",
-          imageURL: "assets/wait-theres-more.png",
-          height: 100,
-          width: 100,
+        ChangeNotifierProvider(
+          create: (context) => HoverProvider(),
+          child: SkillsTile(
+            title: "Everything else",
+            imageURL: "assets/wait-theres-more.png",
+            height: 100,
+            width: 100,
+          ),
         )
       ],
     );
