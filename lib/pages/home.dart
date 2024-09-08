@@ -7,6 +7,8 @@ import 'package:personal_portfolio/widgets/drawrer_widget.dart';
 import 'package:personal_portfolio/widgets/projects_done.dart';
 import 'package:personal_portfolio/widgets/projects_list_view.dart';
 import 'package:personal_portfolio/widgets/reusable_appbar.dart';
+import 'package:personal_portfolio/widgets/skills_menu.dart';
+import 'package:personal_portfolio/widgets/skills_section.dart';
 import 'package:personal_portfolio/widgets/welcome_section.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,6 +62,11 @@ class HomeScreen extends StatelessWidget {
 
                 // Skills
 
+                SkillsSection(),
+                SizedBox(height: 10,),
+                SkillsMenu(),
+                
+                
                 /*
                 Maybe design a horizontal list view like the project section 
                 for each skill and when you click a skill it displays a new
