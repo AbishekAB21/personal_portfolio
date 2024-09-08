@@ -6,7 +6,9 @@ import 'package:personal_portfolio/utils/fontstyles.dart';
 class SkillsTile extends StatelessWidget {
   String title;
   String imageURL;
-  SkillsTile({super.key, required this.title, required this.imageURL});
+  double? height;
+  double? width;
+  SkillsTile({super.key, required this.title, required this.imageURL, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,8 @@ class SkillsTile extends StatelessWidget {
           children: [
             Image.asset(
               imageURL,
-              height: 80,
-              width: 80,
+              height: height?? 80,
+              width: width?? 80,
             ),
             SizedBox(
               height: 10,
