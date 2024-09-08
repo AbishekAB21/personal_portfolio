@@ -81,7 +81,9 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 30,),
 
                 // Contact me
-                ContactMeSection()
+                Container(
+                  key: contactMeKey,
+                  child: ContactMeSection())
               ],
             ),
           ),

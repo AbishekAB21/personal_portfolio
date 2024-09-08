@@ -99,9 +99,10 @@ class MyDrawrer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
+                onSectionSelected(contactMeKey);
               },
               child: DrawrerButton(
-                  title: "Contact Me",
+                  title: "Get in touch",
                   icon: Icon(
                     Icons.mail_rounded,
                     color: Theme.of(context).colorScheme.inversePrimary,
