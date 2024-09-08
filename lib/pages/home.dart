@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/widgets/about_me.dart';
 import 'package:personal_portfolio/widgets/animated_welcome_text.dart';
+import 'package:personal_portfolio/widgets/contact_me.dart';
 import 'package:personal_portfolio/widgets/drawrer_widget.dart';
 import 'package:personal_portfolio/widgets/projects_done.dart';
 import 'package:personal_portfolio/widgets/projects_list_view.dart';
@@ -61,7 +62,6 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 // Skills
-
                 Container(
                   key: skillsKey,
                   child: SkillsSection()),
@@ -69,16 +69,6 @@ class HomeScreen extends StatelessWidget {
                 SkillsMenu(),
                 SizedBox(height: 20,),
                 
-                
-                /*
-                Maybe design a horizontal list view like the project section 
-                for each skill and when you click a skill it displays a new
-                screen giving a brief description about that technology.
-
-                for eg if its firebase then explain about firebase.
-
-                just clone the project details screen 
-                */
 
                 // Projects
                 Container(
@@ -88,8 +78,10 @@ class HomeScreen extends StatelessWidget {
                   height: 10,
                 ),
                 ProjectsList(),
+                SizedBox(height: 30,),
 
                 // Contact me
+                ContactMeSection()
               ],
             ),
           ),
