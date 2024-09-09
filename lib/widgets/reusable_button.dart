@@ -4,7 +4,8 @@ import 'package:personal_portfolio/utils/fontstyles.dart';
 class ReusableButton extends StatelessWidget {
   final buttontext;
   final void Function()? onTap;
-  const ReusableButton({super.key, required this.buttontext, required this.onTap});
+  final Color? color;
+  const ReusableButton({super.key, required this.buttontext, required this.onTap, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ReusableButton extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Theme.of(context).colorScheme.secondary),
+            color: color?? Theme.of(context).colorScheme.secondary),
         child: Center(
             child: Text(
           buttontext,

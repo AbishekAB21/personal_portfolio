@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/widgets/about_me.dart';
 import 'package:personal_portfolio/widgets/animated_welcome_text.dart';
 import 'package:personal_portfolio/widgets/contact_me.dart';
+import 'package:personal_portfolio/widgets/contact_me_box.dart';
 import 'package:personal_portfolio/widgets/drawrer_widget.dart';
 import 'package:personal_portfolio/widgets/projects_done.dart';
 import 'package:personal_portfolio/widgets/projects_list_view.dart';
@@ -83,7 +84,11 @@ class HomeScreen extends StatelessWidget {
                 // Contact me
                 Container(
                   key: contactMeKey,
-                  child: ContactMeSection())
+                  child: ContactMeSection()),
+                  SizedBox(
+                  height: 10,
+                ),
+                ContactMeBox(),
               ],
             ),
           ),

@@ -4,13 +4,14 @@ import 'package:personal_portfolio/utils/fontstyles.dart';
 class ReusableTextFormField extends StatelessWidget {
   final TextEditingController cntrlr;
   final String hinttext;
-  final Icon icon;
+  final Icon? icon;
+  final Color? color;
   final lines;
   const ReusableTextFormField(
       {super.key,
       required this.cntrlr,
       required this.hinttext,
-      required this.icon, this.lines});
+      this.icon, this.lines, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class ReusableTextFormField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       margin: EdgeInsets.symmetric(horizontal: 70),
       decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondary,
+          color:color?? Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(10)),
       child: TextFormField(
         style: Fonstyles.RegularTextStyle(context),
@@ -30,7 +31,7 @@ class ReusableTextFormField extends StatelessWidget {
           hintStyle: Fonstyles.RegularTextStyle(context),         
           hintFadeDuration: Durations.medium1,
           border: InputBorder.none,
-          prefixIcon: icon,
+          prefixIcon: icon ?? null,
           prefixIconColor: Theme.of(context).colorScheme.inversePrimary,
           
         ),
