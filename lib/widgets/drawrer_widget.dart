@@ -99,7 +99,7 @@ class MyDrawrer extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.pop(context);
-                onSectionSelected(contactMeKey);
+                onSectionSelected(contactMeKey, offset: 100.0);
               },
               child: DrawrerButton(
                   title: "Get in touch",

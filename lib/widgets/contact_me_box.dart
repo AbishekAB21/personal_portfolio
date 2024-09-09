@@ -1,10 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:personal_portfolio/utils/fontstyles.dart';
 import 'package:personal_portfolio/widgets/reusable_button.dart';
-import 'package:personal_portfolio/widgets/reusable_snackbar.dart';
 import 'package:personal_portfolio/widgets/reusable_textformfield.dart';
 
 class ContactMeBox extends StatelessWidget {
@@ -59,7 +57,7 @@ class ContactMeBox extends StatelessWidget {
             ),
             ReusableButton(
               buttontext: "Send Message",
-              onTap: () => sendEmail(context),
+              onTap: (){},
             )
           ],
         ),
@@ -67,36 +65,5 @@ class ContactMeBox extends StatelessWidget {
     );
   }
 
-  Future<void> sendEmail(BuildContext context) async {
-    final String name = namecntrlr.text.trim();
-    final String email = emailcntrlr.text.trim();
-    final String message = messagecntrlr.text.trim();
-
-    if (name.isEmpty || email.isEmpty || message.isEmpty) {
-      ReusableSnackBar().showSnackbar(context, "Please fill all the fields.",
-          Theme.of(context).colorScheme.error);
-    }
-
-    Email mail = Email(
-      body: "Name: $name \nEmail: $email \nMessage: $message",
-      subject: 'Contacting through portfolio',
-      recipients: ['abishekabofficial@gmail.com'],
-      isHTML: false,
-    );
-
-    try {
-      await FlutterEmailSender.send(mail);
-      ReusableSnackBar().showSnackbar(
-          context,
-          "Message has been sent successfully",
-          Theme.of(context).colorScheme.tertiary);
-      namecntrlr.clear();
-      emailcntrlr.clear();
-      messagecntrlr.clear();
-    } catch (error) {
-      print(error);
-      ReusableSnackBar().showSnackbar(context, "Error sending message",
-          Theme.of(context).colorScheme.error);
-    }
-  }
+  
 }
