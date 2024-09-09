@@ -25,6 +25,7 @@ class ReusableTextFormField extends StatelessWidget {
       child: TextFormField(
         style: Fonstyles.RegularTextStyle(context),
         maxLines: lines ?? 1,
+        cursorColor: Theme.of(context).colorScheme.inversePrimary,
         controller: cntrlr,
         decoration: InputDecoration(
           hintText: hinttext,
