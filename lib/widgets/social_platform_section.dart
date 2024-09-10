@@ -20,18 +20,21 @@ class SocialPlatformSection extends StatelessWidget {
                   imageUrl: 'assets/github-2.png',
                 ),
               ),
+              SizedBox(height: 30,),
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/linkedin.png',
                 ),
               ),
+              SizedBox(height: 30,),
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/twitter.png',
                 ),
               ),
+              SizedBox(height: 30,),
               ChangeNotifierProvider(
                   create: (context) => HoverProvider(),
                   child: SocialPlatformTile(imageUrl: 'assets/instagram.png'))
@@ -46,21 +49,21 @@ class SocialPlatformSection extends StatelessWidget {
                   imageUrl: 'assets/github-2.png',
                 ),
               ),
-              SizedBox(height: 10,),
+              
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/linkedin.png',
                 ),
               ),
-               SizedBox(height: 10,),
+               
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/twitter.png',
                 ),
               ),
-               SizedBox(height: 10,),
+               
               ChangeNotifierProvider(
                   create: (context) => HoverProvider(),
                   child: SocialPlatformTile(imageUrl: 'assets/instagram.png'))
