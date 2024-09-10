@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/fontstyles.dart';
 import 'package:personal_portfolio/widgets/about_me.dart';
 import 'package:personal_portfolio/widgets/animated_welcome_text.dart';
 import 'package:personal_portfolio/widgets/contact_me.dart';
@@ -11,6 +12,7 @@ import 'package:personal_portfolio/widgets/projects_list_view.dart';
 import 'package:personal_portfolio/widgets/reusable_appbar.dart';
 import 'package:personal_portfolio/widgets/skills_menu.dart';
 import 'package:personal_portfolio/widgets/skills_section.dart';
+import 'package:personal_portfolio/widgets/social_platform_section.dart';
 import 'package:personal_portfolio/widgets/welcome_section.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -89,6 +91,12 @@ class HomeScreen extends StatelessWidget {
                   height: 10,
                 ),
                 ContactMeBox(),
+                SizedBox(height: 30,),
+
+                SocialPlatformSection(),
+                SizedBox(height: 50,),
+
+                Text("Designed and developed by Abishek", style: Fonstyles.SmallTextStyle(context),)
               ],
             ),
           ),
