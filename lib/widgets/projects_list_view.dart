@@ -37,7 +37,7 @@ class ProjectsList extends StatelessWidget {
                       project['projectDescription2'] ?? 'No Description';
                   final projectDesc3 =
                       project['projectDescription3'] ?? 'No Description';
-                 return Container(
+                  return Container(
                     margin: EdgeInsets.symmetric(horizontal: 15),
                     width: 250,
                     decoration: BoxDecoration(
@@ -56,6 +56,14 @@ class ProjectsList extends StatelessWidget {
                                       projectLogo,
                                       height: 80,
                                       width: 80,
+                                      errorBuilder:
+                                          (context, error, stackTrace) {
+                                        return Image.asset(
+                                          "assets/no-image.png",
+                                          height: 80,
+                                          width: 80,
+                                        );
+                                      },
                                     )
                                   : Image.asset(
                                       "assets/no-image.png",
