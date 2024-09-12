@@ -36,7 +36,7 @@ class ProjectsList extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      "Foodio - A Food Delivery App",
+                      "Foodio",
                       style: Fonstyles.HeadingTextStyle2(context).copyWith(
                         fontSize: 16, // Adjusted font size
                       ),

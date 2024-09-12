@@ -8,7 +8,7 @@ class AnimatedWelcomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(animatedTexts: [
-      TypewriterAnimatedText("Welcome to my portfolio !",
+      TypewriterAnimatedText("Hello, Fancy seeing you here!",
           textStyle: Fonstyles.MediumTextStyle2(context),
           speed: Duration(milliseconds: 70)
           
