@@ -5,7 +5,20 @@ import 'package:personal_portfolio/widgets/github_button.dart';
 import 'package:personal_portfolio/widgets/reusable_appbar.dart';
 
 class ProjectScreen extends StatelessWidget {
-  const ProjectScreen({super.key});
+  final projectLogo;
+  final projectName;
+  final projectDesc1;
+  final projectDesc2;
+  final projectDesc3;
+  final githubLink;
+  ProjectScreen(
+      {super.key,
+      required this.projectLogo,
+      required this.projectName,
+      required this.projectDesc1,
+      required this.projectDesc2,
+      required this.projectDesc3,
+      required this.githubLink});
 
   @override
   Widget build(BuildContext context) {
@@ -15,59 +28,59 @@ class ProjectScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Responsive.isMobile(context) || Responsive.isTablet(context)
             ? SingleChildScrollView(
-              child: Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Center(
                       child: Column(
                         children: [
                           Text(
-                            "Foodio",
+                            projectName,
                             style: Fonstyles.HeadingTextStyle(context),
                           ),
                           SizedBox(height: 10),
-                          Image.asset(
-                            "assets/foodio.png",
+                          Image.network(
+                            projectLogo,
                             height: 200,
                             width: 200,
                           ),
                         ],
                       ),
                     ),
-              
+
                     // Para 1
                     SizedBox(height: 10),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                        projectDesc1,
                         textAlign: TextAlign.justify,
                         style: Fonstyles.RegularTextStyle(context),
                       ),
                     ),
-              
+
                     // Para 2
                     SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                       projectDesc2,
                         textAlign: TextAlign.justify,
                         style: Fonstyles.RegularTextStyle(context),
                       ),
                     ),
-              
+
                     // Para 3
                     SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                       projectDesc3,
                         textAlign: TextAlign.justify,
                         style: Fonstyles.RegularTextStyle(context),
                       ),
                     ),
-              
+
                     SizedBox(
                       height: 30,
                     ),
@@ -77,7 +90,7 @@ class ProjectScreen extends StatelessWidget {
                     )
                   ],
                 ),
-            )
+              )
             : Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +103,7 @@ class ProjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
-                            "Foodio",
+                           projectName,
                             style: Fonstyles.HeadingTextStyle(context),
                           ),
                         ),
@@ -100,7 +113,7 @@ class ProjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
-                            "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                            projectDesc1,
                             textAlign: TextAlign.justify,
                             style: Fonstyles.RegularTextStyle(context),
                           ),
@@ -111,7 +124,7 @@ class ProjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
-                            "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                            projectDesc2,
                             textAlign: TextAlign.justify,
                             style: Fonstyles.RegularTextStyle(context),
                           ),
@@ -122,7 +135,7 @@ class ProjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
-                            "Foodio is a food delivery application built using Flutter/Dart. The backend is handled by Google's Firebase. State management is done by Provider and GetX. Animations are integrated using Lottie.",
+                            projectDesc3,
                             textAlign: TextAlign.justify,
                             style: Fonstyles.RegularTextStyle(context),
                           ),
@@ -142,8 +155,8 @@ class ProjectScreen extends StatelessWidget {
                     flex: 0,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Image.asset(
-                        "assets/foodio.png",
+                      child: Image.network(
+                       projectLogo,
                         height: Responsive.isWideDesktop(context) ? 400 : 300,
                         width: Responsive.isWideDesktop(context) ? 400 : 300,
                       ),
