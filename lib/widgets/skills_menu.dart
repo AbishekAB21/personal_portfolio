@@ -16,7 +16,7 @@ class SkillsMenu extends StatelessWidget {
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SkillsTile(
-                  title: "UI/UX",
+                  title: "UI-UX",
                   imageURL: "assets/ui.png",
                 ),
               ),
@@ -55,7 +55,7 @@ class SkillsMenu extends StatelessWidget {
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SkillsTile(
-                  title: "UI/UX",
+                  title: "UI-UX",
                   imageURL: "assets/ui.png",
                 ),
               ),
