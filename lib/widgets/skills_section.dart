@@ -64,7 +64,7 @@ class SkillsSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "As a self taught Flutter developer I have worked with a lot of technologies related to flutter. Starting from methods to build attractive UI to effective state management to backend integration and API integration. You can get a better idea below.",
+                      "As a self-taught Flutter developer, I have gained extensive experience with a wide array of technologies related to Flutter. My expertise spans from crafting visually compelling user interfaces to implementing effective state management solutions. I am adept at backend integration and API connectivity, ensuring seamless functionality across all aspects of application development. For a comprehensive overview of my work and skills, please refer to the detailed examples provided below.",
                       overflow: TextOverflow.clip,
                       textAlign: TextAlign.justify,
                       style: Fonstyles.RegularTextStyle(context),

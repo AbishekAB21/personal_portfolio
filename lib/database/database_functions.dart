@@ -13,4 +13,9 @@ class DatabaseFunctions {
   
 
   // Fetch skills 
+
+ Future <DocumentSnapshot> fetchSkills(String skillCategory) async{
+
+    return await _firebase.collection("skills").doc(skillCategory).get();
+  }
 }

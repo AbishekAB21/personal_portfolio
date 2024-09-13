@@ -64,7 +64,7 @@ class ProjectsIntro extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "During my time at this self learning bootcamp called 'Brototype' I've developed several applications using Flutter. You can find these said projects below and for more details you can click on the specific project.",
+                      "I have developed a diverse array of projects using Flutter, showcasing my ability to create robust and innovative applications. You can explore these projects and see the breadth of my work in the section below.",
                       overflow: TextOverflow.clip,
                       textAlign: TextAlign.justify,
                       style: Fonstyles.RegularTextStyle(context),

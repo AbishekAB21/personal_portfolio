@@ -5,8 +5,8 @@ import 'package:personal_portfolio/utils/fontstyles.dart';
 
 class SkillsDialog extends StatelessWidget {
   String title;
-  String? desc; // Make this required
-   SkillsDialog({super.key, required this.title, this.desc});
+  String desc; // Make this required
+   SkillsDialog({super.key, required this.title, required this.desc});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SkillsDialog extends StatelessWidget {
           
               Text(title, style: Fonstyles.HeadingTextStyle2(context),),
               SizedBox(height: 30,),
-              Text("As for UI/UX I've worked with various state management tools like Provider, Getx, Bloc etc. Coming to the UI design I'm familiar with all of the UI related widgets offred by flutter. I've also familiarised myself with fluter animations as well.", 
+              Text(desc, 
               style: Fonstyles.RegularTextStyle(context),
               textAlign: TextAlign.justify,
               overflow: TextOverflow.clip,

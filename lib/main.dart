@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/pages/admin.dart';
 import 'package:personal_portfolio/pages/home.dart';
 import 'package:personal_portfolio/provider/admin_screen_provider.dart';
 import 'package:personal_portfolio/provider/skills_provider.dart';
