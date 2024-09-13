@@ -18,26 +18,40 @@ class SocialPlatformSection extends StatelessWidget {
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/github-2.png',
+                  url: "https://github.com/AbishekAB21",
                 ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/linkedin.png',
+                  url: "https://www.linkedin.com/in/abishek-ab-262b0921b/",
                 ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/twitter.png',
+                  url:
+                      "https://x.com/magicalsilva21?t=DD_b7w8p7_WQ5th-xzK-fg&s=09",
                 ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               ChangeNotifierProvider(
                   create: (context) => HoverProvider(),
-                  child: SocialPlatformTile(imageUrl: 'assets/instagram.png'))
+                  child: SocialPlatformTile(
+                    imageUrl: 'assets/instagram.png',
+                    url:
+                        "https://www.instagram.com/abishek__aravind?igsh=YzB3OWtqNTRnNjN3",
+                  ))
             ],
           )
         : Row(
@@ -47,26 +61,31 @@ class SocialPlatformSection extends StatelessWidget {
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/github-2.png',
+                  url: "https://github.com/AbishekAB21",
                 ),
               ),
-              
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/linkedin.png',
+                  url: "https://www.linkedin.com/in/abishek-ab-262b0921b/",
                 ),
               ),
-               
               ChangeNotifierProvider(
                 create: (context) => HoverProvider(),
                 child: SocialPlatformTile(
                   imageUrl: 'assets/twitter.png',
+                  url:
+                      "https://x.com/magicalsilva21?t=DD_b7w8p7_WQ5th-xzK-fg&s=09",
                 ),
               ),
-               
               ChangeNotifierProvider(
                   create: (context) => HoverProvider(),
-                  child: SocialPlatformTile(imageUrl: 'assets/instagram.png'))
+                  child: SocialPlatformTile(
+                    imageUrl: 'assets/instagram.png',
+                    url:
+                        "https://www.instagram.com/abishek__aravind?igsh=YzB3OWtqNTRnNjN3",
+                  ))
             ],
           );
   }
