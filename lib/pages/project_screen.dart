@@ -39,45 +39,83 @@ class ProjectScreen extends StatelessWidget {
                             style: Fonstyles.HeadingTextStyle(context),
                           ),
                           SizedBox(height: 10),
-                          Image.network(
-                            projectLogo,
-                            height: 200,
-                            width: 200,
+                          // Image.network(
+                          //   projectLogo,
+                          //   height: 200,
+                          //   width: 200,
+                          // ),
+                        ],
+                      ),
+                    ),
+
+                    // 1st Para
+                    SizedBox(height: 30),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "What is $projectName ?",
+                            style: Fonstyles.HeadingTextStyle2(context),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            projectDesc1,
+                            textAlign: TextAlign.justify,
+                            style: Fonstyles.RegularTextStyle(context),
                           ),
                         ],
                       ),
                     ),
 
-                    // Para 1
-                    SizedBox(height: 10),
+                    // 2nd Para
+                    SizedBox(height: 20),
+
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        projectDesc1,
-                        textAlign: TextAlign.justify,
-                        style: Fonstyles.RegularTextStyle(context),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Technincal side",
+                            style: Fonstyles.HeadingTextStyle2(context),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            projectDesc2,
+                            textAlign: TextAlign.justify,
+                            style: Fonstyles.RegularTextStyle(context),
+                          ),
+                        ],
                       ),
                     ),
 
-                    // Para 2
-                    SizedBox(height: 20),
+                    // 3rd Para
+                    SizedBox(height: 30),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                       projectDesc2,
-                        textAlign: TextAlign.justify,
-                        style: Fonstyles.RegularTextStyle(context),
-                      ),
-                    ),
-
-                    // Para 3
-                    SizedBox(height: 20),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                       projectDesc3,
-                        textAlign: TextAlign.justify,
-                        style: Fonstyles.RegularTextStyle(context),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Summary",
+                            style: Fonstyles.HeadingTextStyle2(context),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            projectDesc3,
+                            textAlign: TextAlign.justify,
+                            style: Fonstyles.RegularTextStyle(context),
+                          ),
+                        ],
                       ),
                     ),
 
@@ -91,78 +129,133 @@ class ProjectScreen extends StatelessWidget {
                   ],
                 ),
               )
-            : Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Column(
+            : SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                           projectName,
-                            style: Fonstyles.HeadingTextStyle(context),
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text(
+                                  projectName,
+                                  style: Fonstyles.HeadingTextStyle(context),
+                                ),
+                              ),
+
+                              // 1st Para
+                              SizedBox(height: 30),
+
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "What is $projectName ?",
+                                      style:
+                                          Fonstyles.HeadingTextStyle2(context),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      projectDesc1,
+                                      textAlign: TextAlign.justify,
+                                      style:
+                                          Fonstyles.RegularTextStyle(context),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              // 2nd Para
+                              SizedBox(height: 20),
+
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Technincal side",
+                                      style:
+                                          Fonstyles.HeadingTextStyle2(context),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      projectDesc2,
+                                      textAlign: TextAlign.justify,
+                                      style:
+                                          Fonstyles.RegularTextStyle(context),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              // 3rd Para
+                              SizedBox(height: 30),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Summary",
+                                      style:
+                                          Fonstyles.HeadingTextStyle2(context),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      projectDesc3,
+                                      textAlign: TextAlign.justify,
+                                      style:
+                                          Fonstyles.RegularTextStyle(context),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: GithubButton(),
+                              )
+                            ],
                           ),
                         ),
-
-                        // 1st Para
-                        SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            projectDesc1,
-                            textAlign: TextAlign.justify,
-                            style: Fonstyles.RegularTextStyle(context),
-                          ),
-                        ),
-
-                        // 2nd Para
-                        SizedBox(height: 20),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            projectDesc2,
-                            textAlign: TextAlign.justify,
-                            style: Fonstyles.RegularTextStyle(context),
-                          ),
-                        ),
-
-                        // 3rd Para
-                        SizedBox(height: 30),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            projectDesc3,
-                            textAlign: TextAlign.justify,
-                            style: Fonstyles.RegularTextStyle(context),
-                          ),
-                        ),
-
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: GithubButton(),
-                        )
+                        // Expanded(
+                        //   flex: 0,
+                        //   child: Padding(
+                        //     padding: const EdgeInsets.symmetric(horizontal: 20),
+                        //     child: Image.network(
+                        //      projectLogo,
+                        //       height: Responsive.isWideDesktop(context) ? 400 : 300,
+                        //       width: Responsive.isWideDesktop(context) ? 400 : 300,
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
-                  ),
-                  Expanded(
-                    flex: 0,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Image.network(
-                       projectLogo,
-                        height: Responsive.isWideDesktop(context) ? 400 : 300,
-                        width: Responsive.isWideDesktop(context) ? 400 : 300,
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
       ),
     );
