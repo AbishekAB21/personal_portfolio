@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/pages/admin.dart';
 import 'package:personal_portfolio/pages/home.dart';
 import 'package:personal_portfolio/provider/admin_screen_provider.dart';
+import 'package:personal_portfolio/provider/contact_me_provider.dart';
 import 'package:personal_portfolio/provider/skills_provider.dart';
 import 'package:personal_portfolio/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -22,10 +23,13 @@ void main() async {
       create: (context) => ThemeProvider(),
     ),
     ChangeNotifierProvider(
-      create: (context) => AdminProvider(), 
+      create: (context) => AdminProvider(),
     ),
     ChangeNotifierProvider(
       create: (context) => SkillsProvider(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => ContactMeProvider(),
     )
   ], child: const MyApp()));
 }

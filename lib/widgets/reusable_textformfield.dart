@@ -6,12 +6,13 @@ class ReusableTextFormField extends StatelessWidget {
   final String hinttext;
   final Icon? icon;
   final Color? color;
-  final lines;
+  final lines; 
+  final FormFieldValidator<String>? validator;
   const ReusableTextFormField(
       {super.key,
       required this.cntrlr,
       required this.hinttext,
-      this.icon, this.lines, this.color});
+      this.icon, this.lines, this.color, this.validator});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class ReusableTextFormField extends StatelessWidget {
           color:color?? Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(10)),
       child: TextFormField(
+        validator: validator,
         style: Fonstyles.RegularTextStyle(context),
         maxLines: lines ?? 1,
         cursorColor: Theme.of(context).colorScheme.inversePrimary,
