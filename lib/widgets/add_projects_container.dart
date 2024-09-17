@@ -65,7 +65,7 @@ class AddProjectContainer extends StatelessWidget {
                 // Basic Desc
                 ReusableTextFormField(
                   cntrlr: descriptionController,
-                  hinttext: "Project Description - Basic details",
+                  hinttext: "Project Description - What kind of app is it ?",
                   icon: Icon(Icons.description_rounded),
                 ),
 
@@ -75,7 +75,7 @@ class AddProjectContainer extends StatelessWidget {
                 ),
                 ReusableTextFormField(
                   cntrlr: descriptionController2,
-                  hinttext: "Project Description - Backend State management",
+                  hinttext: "Project Description - Technical side",
                   icon: Icon(Icons.description_rounded),
                 ),
 
@@ -85,7 +85,7 @@ class AddProjectContainer extends StatelessWidget {
                 ),
                 ReusableTextFormField(
                   cntrlr: descriptionController3,
-                  hinttext: "Project Description - Conclusion",
+                  hinttext: "Project Description - Summary",
                   icon: Icon(Icons.description_rounded),
                 ),
                 SizedBox(
