@@ -124,7 +124,7 @@ class ProjectScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: GithubButton(),
+                      child: GithubButton(url: githubLink,),
                     )
                   ],
                 ),
@@ -236,7 +236,7 @@ class ProjectScreen extends StatelessWidget {
                               Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 20),
-                                child: GithubButton(),
+                                child: GithubButton(url: githubLink,),
                               )
                             ],
                           ),
