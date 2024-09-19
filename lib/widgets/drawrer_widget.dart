@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/pages/admin.dart';
 import 'package:personal_portfolio/utils/fontstyles.dart';
 import 'package:personal_portfolio/widgets/drawrer_buttons.dart';
 
@@ -112,25 +111,25 @@ class MyDrawrer extends StatelessWidget {
               height: 20,
             ),
 
-// Admin Mode
-            GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AdminScreen(),
-                      ));
-                },
-                child: DrawrerButton(
-                    title: "Admin Mode",
-                    icon: Icon(
-                      Icons.lock,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    ))),
-            SizedBox(
-              height: 20,
-            ),
+// Admin Mode 
+            // GestureDetector(
+            //     onTap: () {
+            //       Navigator.pop(context);
+            //       Navigator.push(
+            //           context,
+            //           MaterialPageRoute(
+            //             builder: (context) => AdminScreen(),
+            //           ));
+            //     },
+            //     child: DrawrerButton(
+            //         title: "Admin Mode",
+            //         icon: Icon(
+            //           Icons.lock,
+            //           color: Theme.of(context).colorScheme.inversePrimary,
+            //         ))),
+            // SizedBox(
+            //   height: 20,
+            // ),
           ],
         ));
   }
