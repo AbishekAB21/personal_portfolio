@@ -8,7 +8,6 @@ class WelcomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Adjust margins, padding, and layout based on device size
     return Container(
       margin: Responsive.isMobile(context) || Responsive.isTablet(context)
           ? EdgeInsets.symmetric(horizontal: 20, vertical: 20)
@@ -20,7 +19,9 @@ class WelcomeSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Center the content for smaller screens
+
+                SizedBox(height: 10,),
+                
                 Text(
                   "Abishek AB",
                   style: Fonstyles.AbsolutelyMassiveTextStyle(context),

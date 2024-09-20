@@ -34,12 +34,12 @@ class AboutMe extends StatelessWidget {
                   style: Fonstyles.RegularTextStyle(context),
                 ),
               ),
-              SizedBox(height: 20),
-              LottieBuilder.asset(
-                "assets/Animation - 1724060555500.json",
-                height: 300,
-                width: 300,
-              ),
+              SizedBox(height: 40),
+              // LottieBuilder.asset(
+              //   "assets/Animation - 1724060555500.json",
+              //   height: 300,
+              //   width: 300,
+              // ),
             ],
           )
         : Row(

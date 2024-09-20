@@ -34,12 +34,12 @@ class SkillsSection extends StatelessWidget {
                   style: Fonstyles.RegularTextStyle(context),
                 ),
               ),
-              SizedBox(height: 20),
-              LottieBuilder.asset(
-                "assets/Animation - 1725788264026.json",
-                height: 300,
-                width: 300,
-              ),
+              SizedBox(height: 30),
+              // LottieBuilder.asset(
+              //   "assets/Animation - 1725788264026.json",
+              //   height: 300,
+              //   width: 300,
+              // ),
             ],
           )
         : Row(

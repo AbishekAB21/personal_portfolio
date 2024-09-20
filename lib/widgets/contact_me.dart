@@ -39,11 +39,11 @@ class ContactMeSection extends StatelessWidget {
                   )
                 ],
               ),
-              LottieBuilder.asset(
-                "assets/Animation - 1725809393188.json",
-                height: Responsive.isWideDesktop(context) ? 300 : 300,
-                width: Responsive.isWideDesktop(context) ? 300 : 300,
-              ),
+              // LottieBuilder.asset(
+              //   "assets/Animation - 1725809393188.json",
+              //   height: Responsive.isWideDesktop(context) ? 300 : 300,
+              //   width: Responsive.isWideDesktop(context) ? 300 : 300,
+              // ),
             ],
           )
         : Row(
